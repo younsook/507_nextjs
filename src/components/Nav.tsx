@@ -66,6 +66,11 @@ export default function Nav() {
               할일목록
             </li>
           </Link> }
+          { login && <Link href="/productlist">
+            <li className='p-4 rounded-lg hover:bg-green-800  hover:text-white'>
+              상품목록
+            </li>
+          </Link> }
           </ul>
         </div>
         <div className='mr-10 text-sm font-bold p-3 text-green-900
