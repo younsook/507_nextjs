@@ -28,8 +28,8 @@ export default function Nav() {
         <div className="flex ml-10">
           {/* <img src={reactLogo} alt="react" /> + 
           <img src="/vite.svg" alt="vite" /> */}
-          <img src="/img/react.svg" width={40} height={40} alt="react" /> + 
-          <img src="/next.svg" width={60} height={60} alt="nextjs" />
+          <Image src="/img/react.svg" width={40} height={40} alt="react" /> + 
+          <Image src="/next.svg" width={60} height={60} alt="nextjs" />
         </div>
         <div className='text-sm font-bold text-green-800'>
           <ul className='flex justify-center items-center'>

@@ -3,9 +3,16 @@
 import { useAtom } from "jotai"
 import { isLogin } from "@/atoms/IsLoginAtom"
 import Login from "@/components/Login";
+import { useState, useEffect } from "react";
+
+
 export default function Home() {
   const [ login,  ] = useAtom(isLogin) ;
-  const id = localStorage.getItem("id") ;
+  const [id, setId] = useState<string | null>(null);
+
+  useEffect (()=>{
+    setId(localStorage.getItem("id"));
+  },[login]);
 
   return (
     <div className="w-full h-full flex justify-center items-center">

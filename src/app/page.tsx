@@ -2,9 +2,15 @@
 import { useAtom } from "jotai"
 import { isLogin } from "../atoms/IsLoginAtom"
 import Login from "@/components/Login";
+import { useEffect, useState } from "react"
 export default function Home() {
-  const [ login,  setLogin] = useAtom(isLogin) ;
-  const id = localStorage.getItem("id") ;
+  const [ login,  ] = useAtom(isLogin) ;
+  const [id, setId] = useState("")
+
+  useEffect(() => {
+    const storedId = localStorage.getItem("id")
+    if (storedId) setId(storedId)
+  }, [])
 
   return (
     <div className="w-full h-full flex justify-center items-center">
